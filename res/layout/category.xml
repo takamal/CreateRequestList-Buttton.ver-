@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    <!-- カテゴリ選択ボタン群 ここから -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+     	<Button 
+	    	android:id="@+id/EggAndDairyAndDrink"
+	        android:text="@string/EggAndDairyAndDrink"
+	        android:layout_width="135dp"
+	        android:layout_height="wrap_content"
+	        android:onClick="orderItemInfo" />
+	    <Button 
+	        android:id="@+id/ProcessItems"
+	        android:text="@string/ProcessItems"
+	        android:layout_width="100dp"
+	        android:layout_height="wrap_content"
+	        android:onClick="orderItemInfo" />
+	    <Button 
+	        android:id="@+id/FishItems"
+	        android:text="@string/FishItems"
+	        android:layout_width="85dp"
+	        android:layout_height="wrap_content"
+	        android:onClick="orderItemInfo" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+	  	<Button 
+	     	android:id="@+id/MeetItems"
+	        android:layout_width="77dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/MeetItems"
+	        android:onClick="orderItemInfo" />
+	    <Button 
+	        android:id="@+id/VegetableItems"
+	      	android:layout_width="77dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/VegetableItems"
+	        android:onClick="orderItemInfo" />
+	    <Button 
+	    	android:id="@+id/FruitItems"
+	        android:layout_width="77dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/FruitItems"
+	        android:onClick="orderItemInfo" />
+	    <Button 
+			android:id="@+id/ElseItems"
+			android:layout_width="90dp"
+			android:layout_height="wrap_content"
+			android:text="@string/ElseItems"
+			android:onClick="orderItemInfo" />
+    </LinearLayout>
+    <!-- カテゴリ選択ボタン群 ここまで -->
+    
+    <!-- 品物名表示一覧 ここから-->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="330dp">
+    	<ScrollView
+        	android:layout_width="wrap_content"
+        	android:layout_height="match_parent">
+        	<TableLayout
+        	    android:id="@+id/itemInfo"
+        	    android:layout_width="match_parent"
+        	    android:layout_height="wrap_content">        	    
+        	</TableLayout>
+   		</ScrollView>
+    </HorizontalScrollView>
+    <!-- 品物名表示一覧 ここまで-->
+    
+    <!-- 画面遷移ボタン ここから-->
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:gravity="bottom"
+	    android:orientation="horizontal">
+	    <Button 
+	        android:id="@+id/ToTopPage"
+	        android:layout_width="160dp"
+	        android:layout_height="wrap_content"	    
+	    	android:text="@string/ToTopPage"
+	    	android:onClick="returnTopPage" />
+	    <Button 
+	        android:id="@+id/ToOrderConfirm"
+	        android:layout_width="160dp"
+	        android:layout_height="wrap_content"	    
+	    	android:text="@string/ToOrderConfirm"
+	    	android:onClick="toConfirmPage" />
+	</LinearLayout>
+	<!-- 画面遷移ボタン ここまで-->
+</LinearLayout>
